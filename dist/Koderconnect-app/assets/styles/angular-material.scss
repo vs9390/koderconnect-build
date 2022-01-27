@@ -1,0 +1,63 @@
+
+
+/* Rounded design */
+.mat-button,
+.mat-flat-button,
+.mat-raised-button,
+.mat-stroked-button {
+    padding      : 0 20px !important;
+    border-radius: 9999px !important;
+}
+
+/* Target all buttons */
+.mat-button,
+.mat-fab,
+.mat-flat-button,
+.mat-icon-button,
+.mat-fab,
+.mat-mini-fab,
+.mat-raised-button,
+.mat-stroked-button {
+
+    display        : inline-flex !important;
+    align-items    : center;
+    justify-content: center;
+    height         : 40px;
+    min-height     : 40px;
+    max-height     : 40px;
+    line-height    : 1 !important;
+
+    .mat-button-wrapper {
+        position       : relative;
+        display        : inline-flex !important;
+        align-items    : center;
+        justify-content: center;
+        height         : 100%;
+        z-index        : 2;
+        /* Move mat-button-wrapper above the ripple and focus overlay */
+    }
+
+    .mat-button-focus-overlay,
+    .mat-button-ripple {
+        z-index: 1;
+    }
+
+    &.mat-button-disabled {
+
+        .mat-icon {
+            opacity: 0.38 !important;
+        }
+    }
+
+    /* mat-progress-spinner inside buttons */
+    .mat-progress-spinner {
+
+        &.mat-progress-spinner-indeterminate-animation[mode=indeterminate] {
+
+            circle {
+                stroke            : currentColor !important;
+                animation-duration: 6000ms;
+            }
+        }
+    }
+}
